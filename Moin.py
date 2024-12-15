@@ -7,8 +7,8 @@ from datetime import datetime, timedelta
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 from threading import Thread
 # Configuration
-TOKEN = '7343295464:AAEM7vk5K3cNXAywZC_Q11wmMzMu4gk09PU'
-ADMIN_USER_ID = 6218253783
+TOKEN = '8036084534:AAGeGq7cYRJADiNO0fnWoO_s21YZso4S6Yc'
+ADMIN_USER_ID = 7292144634
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
@@ -51,7 +51,7 @@ def redeem_key(user_id, key):
 @bot.message_handler(commands=['genkey'])
 def handle_genkey(message):
     if message.from_user.id != ADMIN_USER_ID:
-        bot.reply_to(message, "𝙊𝙉𝙇𝙔 𝙊𝙒𝙉𝙀𝙍 𝘿𝙈-> @MoinOwner")
+        bot.reply_to(message, "𝙊𝙉𝙇𝙔 𝙊𝙒𝙉𝙀𝙍 𝘿𝙈-> @hamito_11")
         return
 
     try:
@@ -101,7 +101,7 @@ def handle_attack(message):
 
     user_data = users.get(user_id)
     if not user_data or user_data['plan'] == 0:
-        bot.reply_to(message, "𝘿𝙈-> @MoinOwner")
+        bot.reply_to(message, "𝘿𝙈-> @hamito_11")
         return
 
     try:
@@ -142,7 +142,7 @@ def handle_text(message):
         else:
             bot.reply_to(message, "🔑 NO ACCOUNT")
     elif message.text == "HELP 🆘":
-        bot.reply_to(message, "𝘿𝙈-> @MoinOwner")
+        bot.reply_to(message, "𝘿𝙈-> @hamito_11")
     else:
         bot.reply_to(message, "Invalid option.")
 
